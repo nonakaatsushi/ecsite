@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:14.0-alpine
+    container_name: postgresql
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgresql/init:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_PASSWORD: Atsu/19940222
